@@ -13,3 +13,9 @@ Commands
 kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 5 --topic inbound-topic
 
 kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 5 --topic outbound-topic
+
+ERROR:
+Error found in Stream Deserialization Exception Handler.
+1. Processor context object is not thread safe , under Deserialization exception handler as the instance must be created per partition bases.
+To view more details kindly refer:https://stackoverflow.com/questions/59384462/kafka-stream-2-3-deserializationexceptionhandler
+2. Last commited poision pill message are not commited.To view in detail, kindly refer https://issues.apache.org/jira/browse/KAFKA-6502
